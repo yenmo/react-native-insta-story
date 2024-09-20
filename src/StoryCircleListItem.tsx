@@ -80,8 +80,8 @@ const StoryCircleListItem = ({
       </TouchableOpacity>
       {showText && (
         <Text
-          numberOfLines={1}
-          ellipsizeMode="tail"
+          // numberOfLines={1}
+          // ellipsizeMode="tail"
           style={[
             {
               width: avatarWrapperSize,
