@@ -18,15 +18,14 @@ const StoryCircleListView = ({
   avatarFlatListProps,
 }: StoryCircleListViewProps) => {
   return (
-    <FlatList
-      keyExtractor={(_item, index) => index.toString()}
-      data={data}
-      horizontal
-      style={styles.paddingLeft}
-      showsVerticalScrollIndicator={false}
-      showsHorizontalScrollIndicator={false}
-      ListFooterComponent={<View style={styles.footer} />}
-      renderItem={({ item, index }) => (
+    <View
+      style={{
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+      }}
+    >
+      {data.map((item, index) => (
         <StoryCircleListItem
           avatarSize={avatarSize}
           handleStoryItemPress={() =>
@@ -42,9 +41,8 @@ const StoryCircleListView = ({
           avatarImageStyle={avatarImageStyle}
           avatarWrapperStyle={avatarWrapperStyle}
         />
-      )}
-      {...avatarFlatListProps}
-    />
+      ))}
+    </View>
   );
 };
 

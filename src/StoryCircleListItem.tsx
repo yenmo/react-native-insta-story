@@ -104,8 +104,8 @@ export default StoryCircleListItem;
 
 const styles = StyleSheet.create({
   container: {
-    marginVertical: 5,
-    marginRight: 10,
+    width: 90,
+    alignItems: 'center',
   },
   avatarWrapper: {
     borderWidth: 2,
