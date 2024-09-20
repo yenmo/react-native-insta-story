@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import {
   View,
   Image,
-  TouchableOpacity,
   Text,
   StyleSheet,
   Platform,
+  Pressable,
 } from 'react-native';
 
 import { usePrevious } from './helpers/StateHelpers';
@@ -59,7 +59,7 @@ const StoryCircleListItem = ({
           alignItems: 'center',
         }}
       >
-        <TouchableOpacity
+        <Pressable
           onPress={() => _handleItemPress(item)}
           style={[
             styles.avatarWrapper,
@@ -86,7 +86,7 @@ const StoryCircleListItem = ({
             source={{ uri: item.user_image }}
             defaultSource={Platform.OS === 'ios' ? DEFAULT_AVATAR : null}
           />
-        </TouchableOpacity>
+        </Pressable>
       </LinearGradient>
       {showText && (
         <Text
