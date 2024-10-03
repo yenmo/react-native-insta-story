@@ -51,7 +51,7 @@ export default class CubeNavigationHorizontal extends React.Component {
         toValue: { x: goTo, y: 0 },
         friction: 5,
         tension: 0.6,
-        useNativeDriver: false,
+        useNativeDriver: true,
       }).start();
       setTimeout(() => {
         this.setState({
@@ -112,7 +112,7 @@ export default class CubeNavigationHorizontal extends React.Component {
         toValue: { x: this.pages[page], y: 0 },
         friction: 5,
         tension: 0.6,
-        useNativeDriver: false,
+        useNativeDriver: true,
       }).start();
     } else {
       this._animatedValue.setValue({ x: this.pages[page], y: 0 });
